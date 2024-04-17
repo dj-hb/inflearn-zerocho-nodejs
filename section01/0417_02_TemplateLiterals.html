@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // function a() {
+    //   console.log('a')
+    // }
+    // a`` // tagged template literal
+
+
+
+
+
+
+    const person = "Mike"
+    const age = 28
+    function myTag(strings, personExp, ageExp) {
+      // console.log(strings)
+      // console.log(personExp) // Mike
+      // console.log(ageExp) // 28
+
+      const str0 = strings[0] // "That "
+      const str1 = strings[1] // " is a "
+      const str2 = strings[2] // "."
+
+      const ageStr = ageExp < 100 ? "youngster" : "centenarian"
+      
+      return `${str0}${personExp}${str1}${ageStr}${str2}`
+    }
+    const output = myTag`That ${person} is a ${age}.`
+    console.log(output)
+    
+  </script>
+</body>
+</html>

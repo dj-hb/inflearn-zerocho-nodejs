@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div style="padding: 50px;">
+    <button id="my-button">re:wind</button>
+  </div>
+  <script>
+
+    // var relationship0 = {
+    //   name: 'ine',
+    //   friends: ['lilpa', 'gosegu'],
+    //   logFriends: function () {
+    //     console.log(this)
+    //   }
+    // }
+    // relationship0.logFriends()
+
+
+
+    // var relationship1 = {
+    //   name: 'ine',
+    //   friends: ['lilpa', 'gosegu'],
+    //   logFriends: function () {
+    //     var that = this
+    //     console.log(that)
+    //   }
+    // }
+    // relationship1.logFriends()
+
+    
+
+    // var relationship2 = {
+    //   name: 'ine',
+    //   friends: ['lilpa', 'gosegu'],
+    //   logFriends: function () {
+    //     console.log(this.name) // 여기서 this 는 relationship2 를 가리킨다
+    //     console.log(this.friends) // 여기서 this 는 relationship2 를 가리킨다
+    //     this.friends.forEach(function (friend) {
+    //       console.log(this) // 여기서 this 는 window 를 가리킨다
+    //     })
+    //   }
+    // }
+    // relationship2.logFriends()
+
+
+
+    // var relationship3 = {
+    //   name: 'ine',
+    //   friends: ['lilpa', 'gosegu'],
+    //   logFriends: function () {
+    //     var that = this
+    //     console.log(that)
+    //     this.friends.forEach(function (friend) {
+    //       console.log(that)
+    //       console.log(this.name, friend)
+    //     })
+    //   }
+    // }
+    // relationship3.logFriends()
+
+
+
+    var relationship4 = {
+      name: 'ine',
+      friends: ['lilpa', 'gosegu'],
+      logFriends: function () {
+        console.log(this) // 이 this 는 relationship4 를 가리킨다
+        this.friends.forEach((friend) => {
+          console.log(this.name, friend) // 이 this 도 relationship4 를 가리킨다. 화살표 함수 안의 this 는 부모 스코프의 this 와 같다.
+        })
+      }
+    }
+    relationship4.logFriends()
+
+
+
+    // const myButton = document.querySelector('#my-button')
+    // myButton.addEventListener('click', function () {
+    //   console.log(this) // 이 this 는 myButton 을 가리킨다
+    //   console.log(this.textContent)
+    // })
+
+
+
+    // const myButton = document.querySelector('#my-button')
+    // myButton.addEventListener('click', () => {
+    //   console.log(this) // 이 this 는 window 를 가리킨다
+    //   console.log(this.textContent) // 정상적으로 동작하지 않음
+    // })
+
+
+
+    const myButton = document.querySelector('#my-button')
+    myButton.addEventListener('click', (e) => {
+      console.log(e.target) // function 대신 화살표 함수를 사용하려면 이렇게 e.target 으로 접근해야 한다 (this 를 쓸 수 없기 때문)
+      console.log(e.target.textContent)
+    })
+
+
+  </script>
+</body>
+</html>
