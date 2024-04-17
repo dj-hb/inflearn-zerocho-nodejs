@@ -127,4 +127,19 @@
 
 9. 프런트엔드 자바스크립트
 
-  * 
+  * AJAX
+
+  * Axios 라이브러리
+
+  * FormData
+    - 이미지, 파일, 동영상 등
+
+  * encodeURIComponent, decodeURIComponent
+    - 주소에 한글이 들어가는 경우
+
+  * data attribute 와 dataset
+    - HTML 태그에 데이터 저장하는 방법
+    - 태그 속성으로 'data-속성명', 자바스크립트로 접근 시에는 '태그.dataset.속성명'
+      - data-user-job --> dataset.userJob
+      - data-id --> dataset.id
+    
