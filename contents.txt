@@ -12,6 +12,8 @@
 
   * Q&A
 
+
+
 1. 알아두어야 할 자바스크립트
 
   * 호출 스택 알아보기
@@ -31,3 +33,39 @@
   * Promise, async/await
 
   * 프런트엔드 자바스크립트
+
+
+
+2. 노드 기능
+
+  * REPL와 js 파일 실행하기
+  
+  * 모듈 만들기
+
+  * global과 콘솔, 타이머
+
+  * exports와 this
+
+  * 모듈 심화, 순환 참조
+
+  * process
+
+  * os와 path
+
+  * url와 querystring
+
+  * crypto와 util
+
+  * worker_threads
+
+  * child_process
+
+  * 파일 시스템 사용하기
+
+  * 버퍼와 스트림 이해하기
+
+  * pipe와 스트림 메모리 효율 확인
+
+  * 스레드풀과 커스텀 이벤트
+
+  * 에러 처리하기

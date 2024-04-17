@@ -1,0 +1,67 @@
+Section 2 : 노드 기능
+
+
+1. REPL와 js 파일 실행하기
+
+  * Read, Evaluate, Print, Loop
+
+      ```(콘솔)
+      $ node
+      > (자바스크립트 코드 입력 가능)
+      ```
+
+
+
+2. 모듈 만들기
+
+  * module.exports
+    require()
+
+  * 브라우저에서 사용하는 자바스크립트의 모듈 시스템 --> import 사용
+    노드 자바스크립트 --> require 사용
+    
+    - 모듈 시스템이 서로 다름
+
+    - 비슷하게 쓰려면 (최신 문법)
+      - module.exports --> export default
+      - require() --> import ~ from ~
+      - 동작 원리가 같지는 않음
+
+
+
+3. global과 콘솔, 타이머
+
+  * 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exports와 this
+모듈 심화, 순환 참조
+process
+os와 path
+url와 querystring
+crypto와 util
+worker_threads
+child_process
+파일 시스템 사용하기
+버퍼와 스트림 이해하기
+pipe와 스트림 메모리 효율 확인
+스레드풀과 커스텀 이벤트
+에러 처리하기
