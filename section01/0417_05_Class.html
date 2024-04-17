@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    class WaktaverseMember {
+      constructor(name, type = 'waktaverse_member') { // 생성자
+        this.name = name
+        this.type = type
+      }
+      static isWaktaverseMember(waktaverseMember) { // 인스턴스
+        return waktaverseMember instanceof WaktaverseMember
+      }
+      msg(fromWakzoo) { // 프로토타입
+        alert(`wakgoodnim~! (${this.name})${fromWakzoo === 'board' ? ' gonol upload' : ' dico message'}`)
+      }
+    }
+
+
+    const jururu = new WaktaverseMember('jururu')
+    console.log(WaktaverseMember.isWaktaverseMember(jururu))
+    console.log(jururu)
+    console.log(jururu.name)
+    console.log(jururu.type)
+    jururu.msg()
+
+
+    const rusuk = new WaktaverseMember('rusuk')
+    console.log(WaktaverseMember.isWaktaverseMember(rusuk))
+    console.log(rusuk)
+    console.log(rusuk.name)
+    console.log(rusuk.type)
+    rusuk.msg()
+
+
+    class Gomem extends WaktaverseMember {
+      constructor(name, color) {
+        super(name) // 부모 생성자 함수 호출
+        this.color = color
+      }
+      gonol() {
+        super.msg('board') // 부모 프로토타입 호출
+      }
+    }
+
+
+    const roen = new Gomem('roen', 'hotpink')
+    console.log(WaktaverseMember.isWaktaverseMember(roen))
+    console.log(roen)
+    console.log(roen.name)
+    console.log(roen.type)
+    console.log(roen.color)
+    roen.gonol()
+    
+    
+    const mandu = new Gomem('mandu', 'red')
+    console.log(WaktaverseMember.isWaktaverseMember(mandu))
+    console.log(mandu)
+    console.log(mandu.name)
+    console.log(mandu.type)
+    console.log(mandu.color)
+    mandu.gonol()
+    mandu.msg()
+
+
+
+  </script>
+</body>
+</html>
