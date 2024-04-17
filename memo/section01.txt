@@ -96,9 +96,35 @@
 
   * 생성자? prototype? instanceof?
 
-  * 
-
 
 
 8. Promise, async/await
+
+  * Promise : 내용이 실행은 되었지만 아직 결과를 반환하지 않은 객체
+    - 결과를 들고 있다가 추후에 (then) 꺼내서 쓸 수 있다...!
+    - '변수에 저장해놓고' 다른 코드 실행 후, 필요한 시점에 가서 then 이나 catch 붙여서 사용하는 방식
+
+  * 여러 프로미스 객체들 한 번에 처리할 수도 있음
+    - Promise.all
+    - Promise.allSettled
+
+  * await 을 쓰면 변수에 resolve 결과값을 바로 저장할 수 있다.
+    - 여러 개의 then 이 붙어있는 코드도 한 번 더 축약 가능
+  
+  * top-level await 을 쓰면 async 함수 내부가 아니더라도 await 사용 가능
+
+  * async 함수는 기본적으로 Promise 를 간단하게 쓰는 방법이다.
+    - async 함수의 return 값 또한 Promise 와 마찬가지로 then 을 통해서 받거나 await 을 써야 한다.
+
+  * catch 가 없는데, async/await 을 사용한 로직이 실패하는 경우는 어떻게? (resolve 만 처리 가능하고 reject 는 처리할 수가 없는데?)
+    - try/catch 사용
+
+  * for await
+    - 프로미스 배열에 대한 반복문
+    - resolve 된 값들이 변수에 담겨져서 나온다
+
+
+
 9. 프런트엔드 자바스크립트
+
+  * 
